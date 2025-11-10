@@ -16,5 +16,6 @@
 ## フォルダー構成
 パス | 概要
 --- | ---
+[.gemini/](./.gemini/) | Gemini 向けの設定
 [.github/](./.github/) | GitHub 向けの設定
 [guidelines/](./guidelines/) | コーディング規約のドキュメント配置
