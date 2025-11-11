@@ -1,6 +1,6 @@
 # Keep Kotlin Gradle Plugin compatible
 ## 規約
-### 英語
+### 英訳
 Keep Kotlin Gradle Plugin compatible with Gradle when updating.
 
 ### 日本語の原案

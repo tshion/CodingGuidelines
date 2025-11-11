@@ -1,6 +1,6 @@
 # Prefer Kotlin APIs over Android APIs
 ## 規約
-### 英語
+### 英訳
 Prefer Kotlin APIs over Android APIs when they provide similar functionality.
 
 ### 日本語の原案

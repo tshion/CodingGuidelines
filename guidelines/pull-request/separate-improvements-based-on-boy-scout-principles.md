@@ -1,6 +1,6 @@
 # Separate improvements based on Boy Scout principles
 ## 規約
-### 英語
+### 英訳
 Separate improvements based on Boy Scout principles to keep clear context.
 
 ### 日本語の原案
