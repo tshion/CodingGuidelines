@@ -13,7 +13,13 @@ public static partial class Tools
         {
             var dto = await GuidelineIndexModel.Load(GetGuidelineDirPath());
             return dto!.Indexes
-                .Select(x => new { x.Category, x.EnUs, x.JaJp })
+                .Select(x => new
+                {
+                    category = x.Category,
+                    fileName = x.Filename,
+                    textEnglish = x.EnUs,
+                    textJapanese = x.JaJp
+                })
                 .Select(x => JsonSerializer.Serialize(x));
         }
         catch
