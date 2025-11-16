@@ -18,6 +18,18 @@ namespace llms
         };
 
 
+        private static string GetJsonPath(string dirPath)
+            => Path.Join(dirPath, "index.json");
+
+        /// <summary>
+        /// ガイドライン索引情報の読み取り
+        /// </summary>
+        public static async Task<GuidelineIndexDto?> Load(string dirPath)
+        {
+            string json = await File.ReadAllTextAsync(GetJsonPath(dirPath));
+            return JsonSerializer.Deserialize<GuidelineIndexDto>(json, options);
+        }
+
         /// <summary>
         /// ガイドライン索引情報をdistDirPath にindex.json として出力する
         /// </summary>
@@ -29,11 +41,11 @@ namespace llms
             string json = JsonSerializer.Serialize(
                 new GuidelineIndexDto(
                     DateTime.UtcNow.ToString("u"),
-                    indexes.ToList()!
+                    indexes.ToArray()!
                 ),
                 options
             );
-            return File.WriteAllTextAsync(Path.Join(distDirPath, "index.json"), json);
+            return File.WriteAllTextAsync(GetJsonPath(distDirPath), json);
         }
     }
 }

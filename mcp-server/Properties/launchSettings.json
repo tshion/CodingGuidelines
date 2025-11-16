@@ -3,6 +3,7 @@
   "profiles": {
     "http": {
       "commandName": "Project",
+      "commandLineArgs": "..\\guidelines",
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "applicationUrl": "http://localhost:5263",

@@ -5,8 +5,8 @@
     /// </summary>
     /// <param name="UpdateDate">更新日時</param>
     /// <param name="Indexes">索引</param>
-    internal record GuidelineIndexDto(
+    public record GuidelineIndexDto(
         string UpdateDate,
-        List<GuidelineIndexItemDto> Indexes
+        GuidelineIndexItemDto[] Indexes
     );
 }
