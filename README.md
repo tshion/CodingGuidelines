@@ -18,4 +18,8 @@
 --- | ---
 [.gemini/](./.gemini/) | Gemini 向けの設定
 [.github/](./.github/) | GitHub 向けの設定
+[create-index/](./create-index/) | コーディング規約の索引を生成するC# プロジェクト
 [guidelines/](./guidelines/) | コーディング規約のドキュメント配置
+[llms/](./llms/) | AI 向けにデータ加工するC# プロジェクト
+[mcp-server/](./mcp-server/) | コーディング規約に関するMCP サーバーのC# プロジェクト
+[prompts/](./prompts/) | プロンプトの配置

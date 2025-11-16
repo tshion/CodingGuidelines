@@ -503,3 +503,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+###############
+### Project ###
+###############
+guidelines/**/*.json

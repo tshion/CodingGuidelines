@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "create-index": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\..\\guidelines"
+    }
+  }
+}

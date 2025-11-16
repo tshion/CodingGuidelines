@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="create-index/create-index.csproj" Id="156787fc-c3db-4066-a8cf-ba737a7a6998" />
+  <Project Path="llms/llms.csproj" Id="2d01798d-f660-4c37-a73b-8efbaacf804a" />
   <Project Path="mcp-server/mcp-server.csproj" Id="4b336262-bb85-4909-be20-20fa76b134ed" />
 </Solution>
