@@ -12,8 +12,6 @@ app.MapMcp();
 app.Run();
 
 
-// TODO: Get detail of coding guideline
-
 [McpServerToolType]
 public static partial class Tools
 {
