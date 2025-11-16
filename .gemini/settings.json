@@ -1,0 +1,7 @@
+{
+    "mcpServers": {
+        "coding-guideline-mcp": {
+            "httpUrl": "http://localhost:5263"
+        }
+    }
+}

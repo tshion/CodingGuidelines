@@ -1,0 +1,9 @@
+ignore_patterns:
+    - '.gemini/**'
+    - '.github/prompts/**'
+    - '.vscode/**'
+    - 'guidelines/**'
+    - 'prompts/**'
+code_review:
+    pull_request_opened:
+        include_drafts: false
