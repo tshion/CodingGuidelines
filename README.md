@@ -23,3 +23,13 @@
 [llms/](./llms/) | AI 向けにデータ加工するC# プロジェクト
 [mcp-server/](./mcp-server/) | コーディング規約に関するMCP サーバーのC# プロジェクト
 [prompts/](./prompts/) | プロンプトの配置
+
+
+## 参考文献
+* Gemini
+    * https://docs.github.com/en/copilot
+* GitHub
+    * https://docs.github.com/en/copilot
+    * https://github.com/github/awesome-copilot
+* Visual Studio Code
+    * https://code.visualstudio.com/docs/copilot/overview
