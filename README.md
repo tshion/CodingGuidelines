@@ -27,7 +27,7 @@
 
 ## 参考文献
 * Gemini
-    * https://docs.github.com/en/copilot
+    * https://developers.google.com/gemini-code-assist/docs/overview
 * GitHub
     * https://docs.github.com/en/copilot
     * https://github.com/github/awesome-copilot
