@@ -1,4 +1,4 @@
-# Provide sufficient context
+# Provide sufficient descriptions
 ## 規約
 ### 英訳
 Write clear titles and descriptions for your pull requests so that reviewers can quickly understand what the pull request does.

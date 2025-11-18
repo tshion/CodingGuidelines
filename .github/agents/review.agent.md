@@ -16,16 +16,11 @@ When reviewing code changes, consider the following steps:
 3. If any code changes violate the coding guidelines, consider the following:
     1. Fetch `coding-guideline-mcp/get_guideline_index` tool and extract the ones matching the violated coding guidelines.
     2. Get detailed information by fetching `coding-guildeline-mcp/get_guideline_details` tool, and carefully re-review code changes based on that information.
-    3. Suggest specific improvements or fixes.
+4. Suggest specific improvements or fixes.
 
 If you are asked to reply in Japanese, use messages from `coding-guideline-mcp/*` tool.
 
 ## Output Format
-Provide feedback as:
-
-**🔴 Critical Issues** - Must fix before merge
-**🟡 Suggestions** - Improvements to consider
-
 For each issue:
 - Specific line references
 - Clear explanation of the problem
