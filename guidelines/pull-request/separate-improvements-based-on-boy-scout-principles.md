@@ -4,7 +4,7 @@
 Separate improvements based on Boy Scout principles to keep clear context.
 
 ### 日本語の原案
-ボーイスカウトの原則による改善は、主目的がぼやけてしまうので、別Pull Request にしてください。
+ボーイスカウトの原則による改善は、目的がぼやけるため、別Pull Request にすること。
 
 
 ## 解説
@@ -20,5 +20,20 @@ Separate improvements based on Boy Scout principles to keep clear context.
 
 なので、専用のPull Request を作成し、因果関係を明示してください。
 
+### その他の文献
+下記引用のような表現で言及されることがあります。
+なお文中の `CL` は `ChangeList` の略です。
+
+> ## Separate Out Refactorings
+> It’s usually best to do refactorings in a separate CL from feature changes or bug fixes.
+> For example, moving and renaming a class should be in a different CL from fixing a bug in that class.
+> It is much easier for reviewers to understand the changes introduced by each CL when they are separate.
+>
+> Small cleanups such as fixing a local variable name can be included inside of a feature change or bug fix CL, though.
+> It’s up to the judgment of developers and reviewers to decide when a refactoring is so large that it will make the review more difficult if included in your current CL.
+>
+> 引用元: https://google.github.io/eng-practices/review/developer/small-cls.html#refactoring
+
 
 ## 参考文献
+* https://google.github.io/eng-practices/review/developer/small-cls.html#refactoring
