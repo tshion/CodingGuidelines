@@ -11,17 +11,11 @@ using System.Text.Json;
 using System.Text.Unicode;
 
 string guidelineDirPath = Path.GetFullPath(
-    Path.Join(Environment.CurrentDirectory,  "guidelines")
+    Path.Join(Environment.CurrentDirectory, "guidelines")
 );
-if (!Directory.Exists(guidelineDirPath))
-{
-    Console.WriteLine($"指定されたディレクトリーが存在しません: {guidelineDirPath}");
-    Environment.Exit(1);
-    return;
-}
 
-string prefixOriginal = "* 原案: ";
-string prefixEnglish = "* 英訳: ";
+string prefixOriginal = "* 原案:";
+string prefixEnglish = "* 英訳:";
 var tasks = Directory.GetFiles(guidelineDirPath, "*.md", SearchOption.AllDirectories)
     .Select(async filePath =>
     {

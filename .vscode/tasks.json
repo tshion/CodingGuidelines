@@ -4,6 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "add-guideline",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "scripts/add-guideline.cs",
+                "${input:category}",
+                "${input:filename}"
+            ]
+        },
+        {
             "label": "create-index",
             "type": "process",
             "command": "dotnet",
@@ -11,6 +22,18 @@
                 "run",
                 "scripts/create-index.cs"
             ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "category",
+            "type": "promptString",
+            "description": "カテゴリー名"
+        },
+        {
+            "id": "filename",
+            "type": "promptString",
+            "description": "ファイル名"
         }
     ]
 }
