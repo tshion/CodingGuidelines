@@ -1,4 +1,4 @@
-using llms;
+using mcp_server.Models;
 using ModelContextProtocol.Server;
 using System.ComponentModel;
 using System.Text.Json;
@@ -12,13 +12,13 @@ public static partial class Tools
         try
         {
             var dto = await GuidelineIndexModel.Load(GetGuidelineDirPath());
-            return dto!.Indexes
+            return dto!.Items
                 .Select(x => new
                 {
                     category = x.Category,
-                    fileName = x.Filename,
-                    textEnglish = x.EnUs,
-                    textJapanese = x.JaJp
+                    x.textEnglish,
+                    x.textJapanese,
+                    fileName = x.Filename
                 })
                 .Select(x => JsonSerializer.Serialize(x));
         }

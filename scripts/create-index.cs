@@ -31,11 +31,13 @@ var tasks = Directory.GetFiles(guidelineDirPath, "*.md", SearchOption.AllDirecto
         List<string> lines = (await File.ReadAllLinesAsync(filePath)).ToList();
 
         var textOriginal = lines.FirstOrDefault(line => line.StartsWith(prefixOriginal))
-            ?.Replace(prefixOriginal, "");
+            ?.Replace(prefixOriginal, "")
+            ?.Trim();
         if (string.IsNullOrWhiteSpace(textOriginal)) { return null; }
 
         var textEnglish = lines.FirstOrDefault(line => line.StartsWith(prefixEnglish))
-            ?.Replace(prefixEnglish, "");
+            ?.Replace(prefixEnglish, "")
+            ?.Trim();
         if (string.IsNullOrWhiteSpace(textEnglish)) { return null; }
 
         return new
