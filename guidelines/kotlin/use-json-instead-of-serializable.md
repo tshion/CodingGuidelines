@@ -1,11 +1,6 @@
-# Use JSON instead of `java.io.Serializable`
-## 規約
-### 英訳
-Use JSON instead of `java.io.Serializable`.
-
-### 日本語の原案
-`java.io.Serializable` の代わりにJSON を利用すること。
-
+* 原案: `java.io.Serializable` の代わりにJSON を利用すること。
+* 英訳: Use JSON instead of `java.io.Serializable`.
+___
 
 ## 解説
 ### 元ネタ

@@ -1,11 +1,6 @@
-# Provide sufficient descriptions
-## 規約
-### 英訳
-Write clear titles and descriptions for your pull requests so that reviewers can quickly understand what the pull request does.
-
-### 日本語の原案
-Pull Request の内容をレビュー担当者がすぐに理解できるように、Pull Request に明確なタイトルと説明を記述すること。
-
+* 原案: Pull Request の内容をレビュー担当者がすぐに理解できるように、Pull Request に明確なタイトルと説明を記述すること。
+* 英訳: Write clear titles and descriptions for your pull requests so that reviewers can quickly understand what the pull request does.
+___
 
 ## 解説
 コードレビューする際、コードの変更内容だけでは、なぜ必要なのかやどういう想定がされているか等の情報を読み解くことは出来ません。

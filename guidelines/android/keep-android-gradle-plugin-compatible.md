@@ -1,11 +1,6 @@
-# Keep Android Gradle Plugin compatible
-## 規約
-### 英訳
-Keep Android Gradle Plugin compatible with Gradle, JDK, and Kotlin Gradle Plugin when updating.
-
-### 日本語の原案
-Android Gradle Plugin を更新する際、Gradle、JDK、Kotlin Gradle Plugin との互換性を維持すること。
-
+* 原案: Android Gradle Plugin を更新する際、Gradle、JDK、Kotlin Gradle Plugin との互換性を維持すること。
+* 英訳: Keep Android Gradle Plugin compatible with Gradle, JDK, and Kotlin Gradle Plugin when updating.
+___
 
 ## 解説
 Android Gradle Plugin には下記との互換性があり、サポートされるバージョン範囲が定められています。

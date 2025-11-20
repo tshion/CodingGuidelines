@@ -1,11 +1,6 @@
-# Separate improvements based on Boy Scout principles
-## 規約
-### 英訳
-Separate improvements based on Boy Scout principles to keep clear context.
-
-### 日本語の原案
-ボーイスカウトの原則による改善は、目的がぼやけるため、別Pull Request にすること。
-
+* 原案: ボーイスカウトの原則による改善は、目的がぼやけるため、別Pull Request にすること。
+* 英訳: Separate improvements based on Boy Scout principles to keep clear context.
+___
 
 ## 解説
 プログラミングにおけるボーイスカウトの原則は、作業のついでにリファクタリングをして、コードを綺麗に保つことを指します。

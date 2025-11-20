@@ -1,11 +1,6 @@
-# Write small pull requests
-## 規約
-### 英訳
-Keep pull requests small and focused on a single purpose to make them easier for reviewers to understand.
-
-### 日本語の原案
-レビュー担当者が理解しやすいように、Pull Request は小さく、１つの目的に集中すること。
-
+* 原案: レビュー担当者が理解しやすいように、Pull Request は小さく、１つの目的に集中すること。
+* 英訳: Keep pull requests small and focused on a single purpose to make them easier for reviewers to understand.
+___
 
 ## 解説
 > ### Write small pull requests

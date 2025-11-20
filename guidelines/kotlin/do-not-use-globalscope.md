@@ -1,11 +1,6 @@
-# Don't use `GlobalScope`
-## 規約
-### 英訳
-Do not use `GlobalScope` in Kotlin Coroutine.
-
-### 日本語の原案
-Kotlin Coroutine の `GlobalScope` を使用しないこと。
-
+* 原案: Kotlin Coroutine の `GlobalScope` を使用しないこと。
+* 英訳: Do not use `GlobalScope` in Kotlin Coroutine.
+___
 
 ## 解説
 ### API Document の記述
