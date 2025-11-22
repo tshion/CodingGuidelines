@@ -1,22 +1,27 @@
 When performing a code review, respond in Japanese.
 
 # Project Overview
-This project is a mcp server that provides coding guidelines.
+This project is a MCP server that provides coding guidelines.
 It is build using C#.
 
 
 ## Folder Structure
-* `/.gemini`: Contains the settings for Gemini.
-* `/.github`: Contains the settings for GitHub.
-* `./create-index`: Contains the source code for generating the coding guidelines index.
-* `./guidelines`: Contains the documentation for the coding guidelines.
-* `./llms`: Contains the source code for AI utility.
-* `./mcp-server`: Contains the source code for MCP server.
-* `./prompts`: Contains the documentaion for the prompts.
+* `/.gemini`: Contains the settings for Gemini
+* `/.github`: Contains the settings for GitHub
+* `/.vscode`: Contains the settings for Visual Studio Code
+* `/guidelines`: Contains documentation for the coding guidelines
+* `/mcp-server`: Contains the source code for MCP server
+* `/sample`: Contains samples for setting up other repositories
+* `/scripts`: Contains the source code for script
 
 
 ## Libraries and Frameworks
-* C# for MCP server.
+### `/mcp-server`
+* C# (ASP.NET Core)
+* ModelContextProtocol.AspNetCore
+
+### `/scripts`
+* C# ( `dotnet run app.cs` style)
 
 
 ## Coding Standards

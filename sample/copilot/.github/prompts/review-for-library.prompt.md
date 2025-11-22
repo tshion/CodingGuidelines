@@ -1,5 +1,5 @@
 ---
-description: 'Review source code.'
+description: 'Review source code for library implementation.'
 agent: ReviewCode
 ---
 
