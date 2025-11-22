@@ -1,8 +1,8 @@
 When performing a code review, respond in Japanese.
 
 # Project Overview
-This project is a MCP server that provides coding guidelines.
-It is build using C#.
+This project is a collection of coding guidelines.
+It also provides a MCP server built in C# that allows users to obtain coding guidelines.
 
 
 ## Folder Structure

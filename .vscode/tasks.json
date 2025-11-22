@@ -22,6 +22,15 @@
                 "run",
                 "scripts/create-index.cs"
             ]
+        },
+        {
+            "label": "sync-config",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "scripts/sync-config.cs"
+            ]
         }
     ],
     "inputs": [
