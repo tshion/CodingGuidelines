@@ -53,7 +53,7 @@ jobs:
 
           zipName="${TARGET}_${VERSION}.zip"
           cd "$TARGET"; zip -X -r "$zipName" .
-          echo "name=$zipName" >> "$GITHUB_OUTPUT"
+          echo "name=${TARGET}/${zipName}" >> "$GITHUB_OUTPUT"
 
       - name: Publish for Windows
         id: zipWindows
@@ -65,7 +65,7 @@ jobs:
 
           zipName="${TARGET}_${VERSION}.zip"
           cd "$TARGET"; zip -X -r "$zipName" .
-          echo "name=$zipName" >> "$GITHUB_OUTPUT"
+          echo "name=${TARGET}/${zipName}" >> "$GITHUB_OUTPUT"
 
       # https://github.com/tshion/apply-git-user
       - uses: tshion/apply-git-user@3.0.0
