@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: mcp-server",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\mcp-server\\mcp-server.csproj",
+            "launchConfigurationId": "TargetFramework=;http"
+        }
+    ]
+}

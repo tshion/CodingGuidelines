@@ -510,3 +510,4 @@ $RECYCLE.BIN/
 ###############
 !.vscode/mcp.json
 guidelines/**/*.json
+!mcp-server/**/*.pubxml

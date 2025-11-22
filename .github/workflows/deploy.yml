@@ -1,0 +1,84 @@
+name: Deploy MCP server
+
+on:
+  workflow_dispatch:
+    inputs:
+      versionBuild:
+        description: "バージョン情報: build(1桁)"
+        required: true
+        type: number
+        default: 0
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: ${{ 0 <= inputs.versionBuild && inputs.versionBuild < 10 && github.ref_type == 'branch' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 15
+    steps:
+      # https://github.com/actions/checkout
+      - uses: actions/checkout@v5
+
+      - name: Format meta data
+        id: meta
+        env:
+          BUILD: ${{ inputs.versionBuild }}
+        run: |
+          version="$(bash .github/scripts/date.bash)${BUILD}"
+          echo "branch=feature/${version}" >> "$GITHUB_OUTPUT"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+
+      # https://github.com/tshion/can-create-release
+      - uses: tshion/can-create-release@0.1.1
+        with:
+          tag: ${{ steps.meta.outputs.version }}
+
+      # https://github.com/actions/setup-dotnet
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+
+      - name: Publish for macOS
+        id: zipMacOS
+        env:
+          TARGET: osx-arm64
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          dotnet publish -p:PublishProfile="$TARGET" --output "$TARGET"
+
+          zipName="$TARGET_$VERSION.zip"
+          cd "$TARGET"; zip -X -r "$zipName" .
+          echo "name=$zipName" >> "$GITHUB_OUTPUT"
+
+      - name: Publish for Windows
+        id: zipWindows
+        env:
+          TARGET: win-x64
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          dotnet publish -p:PublishProfile="$TARGET" --output "$TARGET"
+
+          zipName="$TARGET_$VERSION.zip"
+          cd "$TARGET"; zip -X -r "$zipName" .
+          echo "name=$zipName" >> "$GITHUB_OUTPUT"
+
+      # https://github.com/tshion/apply-git-user
+      - uses: tshion/apply-git-user@2.1.2
+        with:
+          user: github-actions
+
+      - name: Create release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.meta.outputs.version }}
+          ZIP_PATH_MACOS: "${{ steps.zipMacOS.outputs.name }}"
+          ZIP_PATH_WINDOWS: "build/${{ steps.zipWindows.outputs.name }}"
+        run: |
+          git tag "$VERSION"
+          git push origin "$VERSION"
+          gh release create "$VERSION" "$ZIP_PATH_MACOS" "$ZIP_PATH_WINDOWS" --generate-notes --title "$VERSION"
