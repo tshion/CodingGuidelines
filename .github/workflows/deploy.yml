@@ -51,7 +51,7 @@ jobs:
         run: |
           dotnet publish -p:PublishProfile="$TARGET" --output "$TARGET"
 
-          zipName="$TARGET_$VERSION.zip"
+          zipName="${TARGET}_${VERSION}.zip"
           cd "$TARGET"; zip -X -r "$zipName" .
           echo "name=$zipName" >> "$GITHUB_OUTPUT"
 
@@ -63,7 +63,7 @@ jobs:
         run: |
           dotnet publish -p:PublishProfile="$TARGET" --output "$TARGET"
 
-          zipName="$TARGET_$VERSION.zip"
+          zipName="${TARGET}_${VERSION}.zip"
           cd "$TARGET"; zip -X -r "$zipName" .
           echo "name=$zipName" >> "$GITHUB_OUTPUT"
 
@@ -76,8 +76,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.meta.outputs.version }}
-          ZIP_PATH_MACOS: "${{ steps.zipMacOS.outputs.name }}"
-          ZIP_PATH_WINDOWS: "build/${{ steps.zipWindows.outputs.name }}"
+          ZIP_PATH_MACOS: ${{ steps.zipMacOS.outputs.name }}
+          ZIP_PATH_WINDOWS: ${{ steps.zipWindows.outputs.name }}
         run: |
           git tag "$VERSION"
           git push origin "$VERSION"
