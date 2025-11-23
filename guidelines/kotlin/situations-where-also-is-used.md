@@ -3,8 +3,8 @@
 ___
 
 ## 解説
-レシーバーが持つメンバーを他の処理で使いたい時、 基本的には `also` を使うこと。
-他のスコープ関数でも同様のことを実現できなくもないが、下記にあるような問題があるため、避けること。
+レシーバーのプロパティやメソッドを他の処理で使いたい時、 基本的には `also` を使うこと。
+他のスコープ関数でも同様の処理を記述できるが、意図しない挙動を招く可能性があるため避けること。
 
 ### `let` との使い分け
 スコープ関数 `let` は、レシーバーを `it` で受け取れる点では `also` と同じだが、
@@ -39,7 +39,7 @@ val someData = SomeData("text from data class")
 someData.also { println(it.text) } // text from data class
 someData.apply { println(text) } // text from local variable
 
-// サンプルコード: https://pl.kotl.in/7vP58y4FL
+// Playground: https://pl.kotl.in/7vP58y4FL
 ```
 
 

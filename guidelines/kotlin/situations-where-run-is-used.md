@@ -3,27 +3,33 @@
 ___
 
 ## 解説
-レシーバーを変換したい場合、コーディング規約にあるように基本的には `let` を使う。
-しかし、エルビス演算子 `?:` の右辺では使えないため、代わりに `run` を使っても良い。
+エルビス演算子 `?:` の右辺は、レシーバーが存在しない。
+コーディング規約で基本的には `run` より `let` を推奨しているが、 
+`let` はレシーバーが必要なため、このケースでは使えない。
+
+一方、 `run` には `inline fun <R> run(block: () -> R): R` という実装があり、
+エルビス演算子の右辺で使うことが出来る。
+
+なので、１行で収まらない複雑な処理がある時は `run` を使うこと。
 
 ``` kotlin
 fun main() { 
     val expectZero = doubleOrDefault(null)
     println(expectZero) // 0
-    
+
     val expectFour = doubleOrDefault(2)
     println(expectFour) // 4
 }
 
 fun doubleOrDefault(
     value: Int?,
-) = value?.let { it * 2 } ?: run { 0 }
+) = value?.let { it * 2 } ?: run {
+    println("value is null")
+    0
+}
 
-// サンプルコード: https://pl.kotl.in/uX1njgGh-
+// Playground: https://pl.kotl.in/tJiUoGDOp
 ```
-
-この例は単純な値の割り当てのため、 `value?.let { it * 2 } ?: 0` と記述できるが、
-もし複雑な処理が必要な場合は、 `run` を使うことでひとまとめに記述できる。
 
 
 ## 関連するコーディング規約
@@ -31,4 +37,5 @@ fun doubleOrDefault(
 
 
 ## 参考文献
+* https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/run.html
 * https://kotlinlang.org/docs/scope-functions.html

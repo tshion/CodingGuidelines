@@ -8,6 +8,7 @@ Provide constructive, actionable feedback.
 ## Task
 1. Read the rules described in this file
 2. Review {{args}}
+3. If the review comments are in English, translate them into Japanese
 
 
 ## Rules
@@ -35,5 +36,4 @@ For each issue:
 * Rationale for the change
 
 Be constructive and educational in your feedback.
-Respond in Japanese.
 """

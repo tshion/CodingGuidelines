@@ -28,7 +28,7 @@ println(titleByLet) // Kotlin
 val titleByRun = complexData.run { first }
 println(titleByRun) // first
 
-// サンプルコード: https://pl.kotl.in/oFqvpgDAX
+// Playground: https://pl.kotl.in/oFqvpgDAX
 ```
 
 なので `let` を使用し、変数のスコープを小さく保つこと。
