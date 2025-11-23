@@ -1,4 +1,4 @@
-* 原案: スコープ関数 `let` は、レシーバーを変換したいときに使うこと。
+* 原案: スコープ関数 `let` は、レシーバーを変換したい時に使うこと。
 * 英訳: Use the scope function `let` when you want to transform the receiver object.
 ___
 
@@ -15,8 +15,8 @@ val titleByRun = complexData.run { first }
 println(titleByRun) // Kotlin
 ```
 
-どちらも同じことが出来るが、同名のローカル変数がある場合、
-`run` のコンテキストの `this` より優先されるため、ローカル変数の値となる。
+ここに同名のローカル変数を追加すると、
+`run` が指す `this` よりローカル変数が優先されるため、結果が変わってしまう。
 
 ``` kotlin
 val first = "first"
@@ -27,13 +27,11 @@ println(titleByLet) // Kotlin
 
 val titleByRun = complexData.run { first }
 println(titleByRun) // first
+
+// サンプルコード: https://pl.kotl.in/oFqvpgDAX
 ```
 
 なので `let` を使用し、変数のスコープを小さく保つこと。
-
-
-## サンプルコード
-* Kotlin playground: https://pl.kotl.in/oFqvpgDAX
 
 
 ## 参考文献
